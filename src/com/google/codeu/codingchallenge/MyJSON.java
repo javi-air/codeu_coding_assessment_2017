@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//Javier Esparza
 package com.google.codeu.codingchallenge;
 
 import java.util.Collection;
@@ -22,6 +23,8 @@ import java.util.Vector;
 final class MyJSON implements JSON {
     
     //main data structure
+    //uses Tokens to hold both JSON objects and Strings
+    //see Token.java for implementation
     public HashMap<String,Token> map;
     
     public MyJSON(){

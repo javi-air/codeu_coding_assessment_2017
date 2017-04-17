@@ -1,7 +1,7 @@
 package com.google.codeu.codingchallenge;
 
 public class Token{
-
+    //this class is able to hold either JSON or String values
     private boolean jsonType = false;
     private boolean stringType = false;
     private String str;
@@ -37,6 +37,7 @@ public class Token{
         throw new java.lang.Error("not a String");
       }
     }
+    //tester
     public static void main(String args[]){
       Token token = new Token("Hello");
       System.out.println(token.getString());
