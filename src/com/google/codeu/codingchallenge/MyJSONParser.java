@@ -26,7 +26,7 @@ final class MyJSONParser implements JSONParser {
       * pre: "{" is in input in
       * post: returns the count of c up until the first "{"
       */
-    public static int count(String in,String c){
+    private static int count(String in,String c){
 	     int count = 0;
        in = in.substring(1);//ignores first "{"
 	      for(int i =0; i < in.length(); i++){
@@ -42,7 +42,7 @@ final class MyJSONParser implements JSONParser {
     * pre: in has quotes
     * post: returns first key
     */
-    public static String getKey(String in){
+    private static String getKey(String in){
       int firstQuote = in.indexOf("\"")+1;
       int secondQuote = in.indexOf("\"",firstQuote);
       String key = in.substring(firstQuote,secondQuote);
@@ -52,7 +52,7 @@ final class MyJSONParser implements JSONParser {
     * pre: in has quotes
     * post: returns first string value
     */
-    public String getValue(String in){
+    private String getValue(String in){
       int firstQuote = in.indexOf("\"")+1;
       int secondQuote = in.indexOf("\"",firstQuote);
       thirdQuote = in.indexOf("\"",secondQuote+1);
